@@ -53,7 +53,7 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release NorelyBlazorPOC/NorelyBlazorPOC.Web.csproj
+        run: dotnet build NorelyBlazorPOC.sln --configuration Release --no-restore
 
       - name: Test with dotnet
         run: dotnet build --configuration Release NorelyBlazorPOC/NorelyBlazorPOC.Tests.csproj
